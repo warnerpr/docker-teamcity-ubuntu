@@ -52,3 +52,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#large binary
+TeamCity-9.0.2.tar.gz
