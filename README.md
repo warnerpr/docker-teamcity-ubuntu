@@ -8,7 +8,19 @@ To run it, clone this repo, then:
 ```
 wget http://download-cf.jetbrains.com/teamcity/TeamCity-9.0.2.tar.gz
 docker build --tag tcserver .
-docker run --detach tcserver
+docker run -p 8111:8111  --detach --name tcserver tcserver
+```
+
+stop it with 
+
+```
+docker kill tcserver
+```
+
+start it again later (config preserved in volume) with:
+
+```
+docker start tcserver
 ```
 
 the server should be reachable at http://localhost:8111
